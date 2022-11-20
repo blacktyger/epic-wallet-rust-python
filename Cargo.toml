@@ -1,0 +1,17 @@
+[package]
+name = "epic-wallet-rust-python"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+authors = ["Grin developers", "Epic developers", "Stack-Wallet developers","@blacktyg3r"]
+description = "Python bindings for epic-wallet rust library"
+repository = "https://github.com/blacktyger/epic-wallet-rust-python/"
+
+[lib]
+name = "epic_wallet_rust_python"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pyo3 = {version = "0.17.3", features = ['extension-module']}
+serde_json = "1.0"
+epic-wallet-rust-lib = {git = "https://github.com/blacktyger/epic-wallet-rust-lib", version = "0.1.0", branch = "clean_lib"}
